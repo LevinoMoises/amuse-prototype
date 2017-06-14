@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@color/white"
+    android:scaleType="center"
+    >
+	
+    <LinearLayout 
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+	    android:background="@color/white"
+        >
+		<ImageView android:id="@+id/splashScreen"
+		    android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_gravity="center"
+	        android:scaleType="fitCenter"
+	        android:src="@mipmap/ic_launcher"/>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/startupProgressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:visibility="visible"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5">
+
+        <LinearLayout
+            android:id="@+id/loginForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/username"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <EditText
+                android:id="@+id/usernameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:inputType="text"
+                android:padding="4dp"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:textColor="@color/colorPrimary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/password"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <EditText
+                android:id="@+id/passwordText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:inputType="textPassword"
+                android:padding="4dp"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:textColor="@color/colorPrimary" />
+
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="220.0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dip"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:fontFamily="@string/font_family"
+                android:onClick="login"
+                android:text="@string/login"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/sign_up_button"
+                android:layout_width="220.0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dip"
+                android:backgroundTint="@color/gray"
+                android:fontFamily="@string/font_family"
+                android:onClick="signUp"
+                android:text="@string/sign_up"
+                android:textAppearance="@android:style/TextAppearance.Large"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+			
+</LinearLayout>

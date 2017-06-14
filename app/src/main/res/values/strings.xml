@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">@string/APP</string>
+
+    <string name="login">Login</string>
+    <string name="sign_up">Sign up</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+
+    <string name="font_family">sans-serif-medium</string>
+
+    <string name="home">Welcome</string>
+    <string name="exit">Exit</string>
+    <string name="exit_confirm">Are you sure you want to exit?</string>
+
+    <string name="error">Error</string>
+    <string name="join_error">Cannot join the AMUSE platform</string>
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+</resources>

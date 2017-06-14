@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        applicationId "levinomoises.prototype"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // Production locations. Required later update
+            resValue "string", "HOST", "172.16.140.108"
+            resValue "string", "PORT", "61746"
+        }
+        debug {
+            // Update this according to local development. Standard port 2099
+            resValue "string", "HOST", "192.168.1.103"
+            resValue "string", "PORT", "2099"
+        }
+    }
+    productFlavors {
+        base {
+            applicationId "levinomoises.prototype"
+            resValue "string", "APP", "Prototype"
+        }
+        easy {
+            applicationId "levinomoises.prototype"
+            resValue "string", "APP", "EasyPrototype"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:design:23.4.0'
+    testCompile 'junit:junit:4.12'
+    compile files('libs/amuseAndroidClient.jar')
+}

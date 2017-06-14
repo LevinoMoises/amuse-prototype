@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   	<string name="amuse_host" translatable="false">@string/HOST</string>
+    <string name="amuse_port" translatable="false">@string/PORT</string>
+    <string name="amuse_proto" translatable="false">socket</string>
+    <string name="registered_app_name" translatable="false">@string/APP</string>
+</resources>
